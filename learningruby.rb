@@ -15,6 +15,16 @@ class Animal
 	end
 end
 
+class Mammal < Animal
+
+	def initialize
+		@legs = "4"
+		@baby_food = "Milk"
+		@special_ability = nil
+	end
+
+end
+
 animals.compact.each do |animal|
 	puts "I have #{animal}"
 end
