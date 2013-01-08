@@ -6,8 +6,6 @@ person = {
 	colors: ["RED","GREEN","BLUE"]
 }
 
-animals.each do |animal|
-	if(animal != nil) 
+animals.compact.each do |animal|
 	puts "I have #{animal}"
-	end
 end
