@@ -16,15 +16,25 @@ class Animal
 end
 
 class Mammal < Animal
-
 	attr_accessor :legs , :baby_food , :special_ability
 	def initialize
+		super
 		@legs = "4"
 		@baby_food = "Milk"
 		@special_ability = nil
 	end
 
 end
+
+class Bird < Animal
+	attr_accessor :wings , :legs
+	def initialize
+		super
+		@wings = "2"
+		@legs = "2"
+	end
+end
+
 
 animals.compact.each do |animal|
 	puts "I have #{animal}"
