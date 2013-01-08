@@ -1,1 +1,1 @@
-test
+animals = ['cat','Dog','Iguana', nil]
