@@ -17,6 +17,7 @@ end
 
 class Mammal < Animal
 
+	attr_accessor :legs , :baby_food , :special_ability
 	def initialize
 		@legs = "4"
 		@baby_food = "Milk"
