@@ -56,10 +56,6 @@ end
 
 class Zoo < Array
 
-	def initialize
-		super
-	end
-
 	def animals 
 		self.each do |animal|
 			puts animal if animal.instance_of? Animal
@@ -73,11 +69,11 @@ class Zoo < Array
 	end
 
 	def search(field,keyword)
-
 		self.each do |animal|
-			puts animal.name if animal.instance_variable_get("@#{field}") == keyword 
-		end
-						
+      	puts animal.name if animal.respond_to?(field) && animal.send(field) == keyword 
+      	end
+    end
+				
 	end
 end
 
