@@ -70,11 +70,10 @@ class Zoo < Array
 
 	def search(field,keyword)
 		self.each do |animal|
-      	puts animal.name if animal.respond_to?(field) && animal.send(field) == keyword 
+      		puts animal.name if animal.respond_to?(field) && animal.send(field) == keyword 
       	end
     end
 				
-	end
 end
 
 
