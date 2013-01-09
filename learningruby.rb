@@ -6,7 +6,8 @@ person = {
 	colors: ["RED","GREEN","BLUE"]
 }
 
-class Animal 
+
+class Animal
 	attr_accessor :name , :age , :gender
 	def initialize(option={})
 		self.name = option[:name] || "Snoopy"
@@ -53,6 +54,33 @@ class Cat < Mammal
 	end
 end
 
+class Zoo < Array
+
+	def initialize
+		super
+	end
+
+	def animals 
+		self.each do |animal|
+			puts animal if animal.instance_of? Animal
+		end
+	end
+
+	def cats
+		self.each do |cat|
+			puts cat if cat.instance_of? Cat
+		end
+	end
+
+	def search(field,keyword)
+
+		self.each do |animal|
+			puts animal.name if animal.instance_variable_get("@#{field}") == keyword 
+		end
+						
+	end
+end
+
 
 animals.compact.each do |animal|
 	puts "I have #{animal}"
@@ -63,4 +91,11 @@ golden_retriever.legs #call legs result (default = 4)
 golden_retriever.best_friend #call golden retriver is best friend  
 golden_retriever.special_ability #call golden retriver special ability
 
+zoo = Zoo.new
+zoo << Animal.new
+cat = Cat.new
+zoo << cat
 
+zoo.animals
+zoo.cats
+zoo.search('legs',4)
