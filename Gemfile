@@ -30,6 +30,23 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test, :development do
+	gem "rspec-rails", "~> 2.12.0"
+end
+
+group :test do
+	gem 'machinist', '>= 2.0.0.beta2'
+	gem 'fakeweb'
+	gem 'simplecov' , :require => false
+	gem 'capybara'
+	gem 'shoulda-matchers'
+	gem 'database_cleaner'
+	gem 'launchy'
+	gem 'json_spec'
+end
+
+
+
 group :development do
 	gem 'meta_request' , '~> 0.2.0'
 end
