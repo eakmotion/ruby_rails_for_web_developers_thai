@@ -1,10 +1,7 @@
-Gamesoocial::Application.routes.draw do
+Gamesss::Application.routes.draw do
   devise_for :users
 
- get '/:id', to: 'profiles#show', as: 'profile'
-
   root :to => "home#index"
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

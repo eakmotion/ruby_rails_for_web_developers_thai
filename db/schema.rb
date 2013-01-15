@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130115090857) do
+ActiveRecord::Schema.define(:version => 20130115124045) do
 
-  create_table "friendships", :force => true do |t|
+  create_table "competitors", :force => true do |t|
     t.integer  "user_id"
-    t.string   "status"
-    t.integer  "friend_id"
+    t.integer  "match_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "matches", :force => true do |t|
+    t.string   "name"
+    t.date     "time"
+    t.integer  "sport_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -24,11 +31,28 @@ ActiveRecord::Schema.define(:version => 20130115090857) do
   create_table "posts", :force => true do |t|
     t.integer  "parent_id"
     t.string   "parent_type"
+    t.text     "content"
     t.integer  "user_id"
-    t.text     "body"
+    t.integer  "match_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "sports", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_friendships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_friendships", ["user_id", "friend_id"], :name => "index_user_friendships_on_user_id_and_friend_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -43,7 +67,6 @@ ActiveRecord::Schema.define(:version => 20130115090857) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.string   "name"
     t.string   "username"
   end
 

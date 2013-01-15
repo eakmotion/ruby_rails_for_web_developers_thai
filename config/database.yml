@@ -15,9 +15,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: social_development
-  host: localhost
+  database: gamesss_development
   pool: 5
+  host: localhost
   username: neung
   password:
 
@@ -42,17 +42,17 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: social_test
-  host: localhost
+  database: gamesss_test
   pool: 5
+  host: localhost
   username: neung
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: social_production
-  host: localhost
+  database: gamesss_production
   pool: 5
+  host: localhost
   username: neung
   password:

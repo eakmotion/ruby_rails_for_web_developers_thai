@@ -54,6 +54,7 @@ end
 
 gem 'state_machine'
 
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

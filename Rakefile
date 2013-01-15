@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Gamesoocial::Application.load_tasks
+Gamesss::Application.load_tasks
