@@ -1,14 +1,13 @@
-<h3>Home</h3>
-<div class="span12 pagination-centered">
-	<ul class="thumbnails">
-		<li><a class="thumbnail"><img src="http://placehold.it/200x200"></a></li>
-		<li><a class="thumbnail"><img src="http://placehold.it/200x200"></a></li>
-	</ul>
-
+<div class="span12 highlight-conter">
+<%= render 'home/match_highlight' %>
 </div>
 
 <div class="span8"><h3>Activity</h3>
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+	<ul class="nav nav-tabs">
+              <li class="active"><a href="#">Statuses</a></li>
+              <li><a href="#">Upcoming Match</a></li>
+            </ul>
+	<%= render 'home/activity' %>
 </div>
 <div class="span3">
 	<div class="profile">
@@ -26,55 +25,8 @@
                 </div>
 
 	</div>
-	<div class="leaderboard">
-		<h3>Leaderboard</h3>
-
-
-			<ul class="nav nav-tabs">
-              <li class="active"><a href="#">Today</a></li>
-              <li><a href="#">Week</a></li>
-              <li><a href="#">All</a></li>
-            </ul>
-
-
-			<table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Picture</th>
-                  <th>User</th>
-                  <th>Win</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Otto</td>
-                  <td>95</td>
-                </tr>
-                <tr>
-                	<td>2</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Otto</td>
-                  <td>93</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Thornton</td>
-                  <td>45</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Larry</td>
-                  <td>39</td>
-                </tr>
-              </tbody>
-     		</table>
-
-	</div>
+	
+	<%= render 'home/leaderboard' %>
 
 </div>
 
