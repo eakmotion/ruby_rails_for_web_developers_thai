@@ -54,7 +54,7 @@ end
 
 gem 'state_machine'
 
-
+gem 'simple_form'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
