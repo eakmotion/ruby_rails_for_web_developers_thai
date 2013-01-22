@@ -11,8 +11,10 @@ class User < ActiveRecord::Base
 
   has_many :team_members
   has_many :teams , through: :team_members
-  has_many :posts
+ # has_many :posts
   has_many :friends, through: :user_friendships
+  has_many :statuses
+
   mount_uploader :avatar , AvatarUploader
 
   def self.other_than(user)

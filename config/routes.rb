@@ -5,6 +5,7 @@ Gamesss::Application.routes.draw do
   resources :matches
   resources :sports
   resources :people, only: [:index]
+  resources :statuses
 
   root :to => "home#index"
 

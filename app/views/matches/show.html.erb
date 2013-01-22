@@ -32,12 +32,23 @@
 <% end %>
 </ol>
 
-
-
-
-
 <p>
   <%= link_to "Edit", edit_match_path(@match) %> |
   <%= link_to "Destroy", @match, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", matches_path %>
 </p>
+
+<div class='tab-pane active clearfix'>
+    <%= form_for @new_status, remote: true do |f| %>
+      <%= f.text_area :content,
+                      size: '3x3',
+                      class: 'input-block-level',
+                      placeholder: "Whats happening?, #{current_user.username} " %>
+
+      <%= f.submit "Post", class: 'btn btn-small btn-primary pull-right' %>
+    <% end %>
+</div>
+
+<div id='statuses' %>
+  <%= render @statuses %>
+</div>

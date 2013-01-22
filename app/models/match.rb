@@ -3,7 +3,7 @@ class Match < ActiveRecord::Base
 
   has_many :teams, :dependent => :destroy
   accepts_nested_attributes_for :teams, :allow_destroy => true
-  has_many :posts
+  has_many :statuses
   belongs_to :sport
 
 end

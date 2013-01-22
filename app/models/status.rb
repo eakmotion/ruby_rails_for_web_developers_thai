@@ -1,0 +1,3 @@
+class Status < Post
+
+end

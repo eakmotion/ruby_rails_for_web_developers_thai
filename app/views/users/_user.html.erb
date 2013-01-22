@@ -1,4 +1,7 @@
+<div class="people-page">
 <%= div_for user, class: 'clearfix' do %>
   <%= image_tag user.avatar_url(:icon).to_s %>
   <%= user.username %>
+  <%= render_friendship_button_for user %>
 <% end %>
+</div>
