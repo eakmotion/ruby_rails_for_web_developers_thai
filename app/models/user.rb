@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   has_many :friends, through: :user_friendships
   mount_uploader :avatar , AvatarUploader
 
+  def self.other_than(user)
+    where("id != ?", user.id)
+  end
+
 end
