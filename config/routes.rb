@@ -1,6 +1,7 @@
 Gamesss::Application.routes.draw do
   devise_for :users
 
+  resources :teams
   resources :matches
 
   root :to => "home#index"

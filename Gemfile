@@ -13,7 +13,7 @@ gem 'devise', '2.1.2'
 
 #file upload
 gem 'carrierwave'
-
+gem 'rmagick'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,6 +24,8 @@ group :assets do
   gem 'bootstrap-sass' , '~> 2.2.2.0'
   gem 'compass-rails'
   gem 'font-awesome-rails'
+  gem "nested_form"
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -44,6 +46,7 @@ group :test do
 	gem 'database_cleaner'
 	gem 'launchy'
 	gem 'json_spec'
+  gem 'pry'
 end
 
 

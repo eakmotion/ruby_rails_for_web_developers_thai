@@ -1,40 +1,59 @@
 class MatchesController < ApplicationController
-	def show
-		@match = Match.find(params[:id])
-	end
+  def index
+    @matches = Match.all
+  end
 
-	def new
-		@match = Match.new
+  def show
+    @match = Match.find(params[:id])
+  end
 
-	end
+  def new
+    #binding.pry
+    @match = Match.new  do |match|
+      match.teams.build do |team|
+        team.name = "A"
+        team.team_members.build
+       # team.users.build
+      end
+      match.teams.build do |team|
+        team.name = "B"
+        team.team_members.build
+       # team.users.build
+      end
+    end
 
-	def create
-		@match = Match.new(params[:match])
+    # 2.times do
+    #   team = @match.teams.build
+    #   1.times { team.users.build }
+    # end
 
-		respond_to do |format|
-			if @match.save
-				format.html { render action: 'new' }
-			else 
-				format.html
-			end
-		end
-	end
+  end
 
-	def update
-		@match = Match.find(params[:id])
+  def create
+    @match = Match.new(params[:match])
+    if @match.save
+      redirect_to @match, :notice => "Successfully created match."
+    else
+      render :action => 'new'
+    end
+  end
 
-		respond_to do |format|
-			if @match.update_attributes(params[:match]) 
-				format.html { redirect_to @match , notice: 'Successful Updated'}
-			else
-				format.html { render actio: 'edit' , notice: 'Unsuccess update'}
-			end
-		end
-	end
+  def edit
+    @match = Match.find(params[:id])
+  end
 
-	def edit
-		@match = Match.find(params[:id])
-	end
+  def update
+    @match = Match.find(params[:id])
+    if @match.update_attributes(params[:match])
+      redirect_to @match, :notice  => "Successfully updated match."
+    else
+      render :action => 'edit'
+    end
+  end
 
-
+  def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    redirect_to matches_url, :notice => "Successfully destroyed match."
+  end
 end
