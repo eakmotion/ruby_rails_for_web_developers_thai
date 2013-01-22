@@ -35,6 +35,7 @@ end
 
 group :test, :development do
 	gem "rspec-rails", "~> 2.12.0"
+  gem 'pry-rails'
 end
 
 group :test do
@@ -58,7 +59,7 @@ gem 'state_machine'
 
 gem 'simple_form'
 gem 'jquery-rails'
-gem 'pry'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

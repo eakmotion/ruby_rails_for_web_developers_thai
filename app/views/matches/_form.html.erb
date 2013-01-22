@@ -3,6 +3,8 @@
     <%= f.label :name ,"Match name" %><br />
     <%= f.text_field :name %>
   </p>
+<p><%= f.select :sport_id , Sport.all.collect{|e| [e.name, e.id]} %></p>
+
   <p>
     <%= f.label :time %><br />
     <%= f.date_select :time %>

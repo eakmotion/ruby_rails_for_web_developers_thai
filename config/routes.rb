@@ -3,6 +3,7 @@ Gamesss::Application.routes.draw do
 
   resources :teams
   resources :matches
+  resources :sports
 
   root :to => "home#index"
 
