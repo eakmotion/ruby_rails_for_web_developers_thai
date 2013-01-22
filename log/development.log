@@ -52937,3 +52937,1342 @@ Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 20:57:03 +0700
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (2.9ms)
+  Rendered matches/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:03 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:05:17 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"TestNew"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.2ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.2ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (3.0ms)
+  Rendered matches/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:05:20 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:05:38 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"Newssss"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:06:28 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"Newssss"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 40ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (60.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.8ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.4ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.2ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (4.1ms)
+  Rendered matches/show.html.erb within layouts/application (45.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 88ms (Views: 52.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:06:32 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:06:45 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"Testttt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 38ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.9ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.4ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (3.7ms)
+  Rendered matches/show.html.erb within layouts/application (123.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 176ms (Views: 127.4ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:11:35 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:11:43 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"testtt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:12:27 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"testtt"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (18.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:12:33 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"testtt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: match_id):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (3.6ms)
+  Rendered matches/show.html.erb within layouts/application (87.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 172ms (Views: 90.1ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /base.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:15 +0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.5ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (3.0ms)
+  Rendered matches/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:15:53 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:16:43 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+Completed 500 Internal Server Error in 13ms
+
+SyntaxError (/Users/neung/rails/ruby_rails_for_web_developers_thai/app/models/post.rb:2: syntax error, unexpected tSYMBEG
+	attr_accessible :content. :match_id
+	                           ^):
+  app/models/status.rb:1:in `<top (required)>'
+  app/controllers/matches_controller.rb:8:in `show'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:16:45 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/neung/rails/ruby_rails_for_web_developers_thai/app/models/post.rb:2: syntax error, unexpected tSYMBEG
+	attr_accessible :content. :match_id
+	                           ^):
+  app/models/status.rb:1:in `<top (required)>'
+  app/controllers/matches_controller.rb:8:in `show'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (3.6ms)
+  Rendered matches/show.html.erb within layouts/application (119.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 170ms (Views: 122.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:17:55 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:18:01 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "content"=>"Testttt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "parent_id", "parent_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "Testttt"], ["created_at", Tue, 22 Jan 2013 14:18:01 UTC +00:00], ["match_id", 26], ["parent_id", nil], ["parent_type", nil], ["rating", nil], ["updated_at", Tue, 22 Jan 2013 14:18:01 UTC +00:00], ["user_id", 3]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to 
+Completed 500 Internal Server Error in 7ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/statuses_controller.rb:6:in `block (2 levels) in create'
+  app/controllers/statuses_controller.rb:5:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:18:04 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (3.5ms)
+  Rendered matches/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:18:05 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered statuses/_status.html.erb (3.4ms)
+  Rendered matches/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:30 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:20:39 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "parent_type"=>"comment", "content"=>"NewTesttt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: parent_type):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:20:40 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "26"]]
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26
+  [1m[36mTeamMember Load (0.2ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.2ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (3.7ms)
+  Rendered matches/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:20:41 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:21:03 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "parent_type"=>"comment", "content"=>"tetet"}, "commit"=>"Post"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: parent_type):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-22 21:21:26 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4tWvWhC2/GXLqdTjuTJqpfJsNiGUFPm863eLD8NABM=", "status"=>{"match_id"=>"26", "parent_type"=>"comment", "content"=>"tetetdsdsdsd"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "parent_id", "parent_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "tetetdsdsdsd"], ["created_at", Tue, 22 Jan 2013 14:21:26 UTC +00:00], ["match_id", 26], ["parent_id", nil], ["parent_type", "comment"], ["rating", nil], ["updated_at", Tue, 22 Jan 2013 14:21:26 UTC +00:00], ["user_id", 3]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to 
+Completed 500 Internal Server Error in 70ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/statuses_controller.rb:6:in `block (2 levels) in create'
+  app/controllers/statuses_controller.rb:5:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/matches/26" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35mStatus Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 26[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 3
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.2ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 4
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (4.9ms)
+  Rendered matches/show.html.erb within layouts/application (44.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 69ms (Views: 50.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 21:22:44 +0700
+Served asset /application.js - 304 Not Modified (0ms)

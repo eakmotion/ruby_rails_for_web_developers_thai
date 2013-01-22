@@ -40,10 +40,13 @@
 
 <div class='tab-pane active clearfix'>
     <%= form_for @new_status, remote: true do |f| %>
+    <%= @match.id %>
+    <%= f.hidden_field :match_id, value: @match.id %>
+    <%= f.hidden_field :parent_type, value: "comment" %>
       <%= f.text_area :content,
                       size: '3x3',
                       class: 'input-block-level',
-                      placeholder: "Whats happening?, #{current_user.username} " %>
+                      placeholder: "Whats happening in this match?, #{current_user.username} " %>
 
       <%= f.submit "Post", class: 'btn btn-small btn-primary pull-right' %>
     <% end %>
