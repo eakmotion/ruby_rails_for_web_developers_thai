@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   has_many :teams , through: :team_members
   has_many :posts
   has_many :friends, through: :user_friendships
-  mount_uploader :avatar , ImageUploader
+  mount_uploader :avatar , AvatarUploader
 
 end

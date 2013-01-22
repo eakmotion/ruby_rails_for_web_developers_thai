@@ -3,4 +3,8 @@ class ProfilesController < ApplicationController
 
 	end
 
+  def index
+
+  end
+
 end
