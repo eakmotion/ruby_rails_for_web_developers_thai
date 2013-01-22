@@ -5,7 +5,7 @@ class MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
-    @new_status = @match.statuses.build
+    @new_status = Status.new(:match_id => @match.id)#@match.statuses.build
     @statuses = Status.all
   end
 
