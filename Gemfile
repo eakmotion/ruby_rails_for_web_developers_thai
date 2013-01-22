@@ -46,7 +46,6 @@ group :test do
 	gem 'database_cleaner'
 	gem 'launchy'
 	gem 'json_spec'
-  gem 'pry'
 end
 
 
@@ -59,7 +58,7 @@ gem 'state_machine'
 
 gem 'simple_form'
 gem 'jquery-rails'
-
+gem 'pry'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

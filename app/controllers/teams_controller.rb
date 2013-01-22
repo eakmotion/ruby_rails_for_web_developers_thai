@@ -14,7 +14,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(params[:team])
     if @team.save
-      redirect_to @team
+      redirect_to @team, :notice => "Successfully created team."
     else
       render :action => 'new'
     end
@@ -25,9 +25,11 @@ class TeamsController < ApplicationController
   end
 
   def update
+    #binding.pry
     @team = Team.find(params[:id])
+    #if @team.update_attributes(:result => params[:result])
     if @team.update_attributes(params[:team])
-      redirect_to @team
+      redirect_to @team, :notice  => "Successfully updated team."
     else
       render :action => 'edit'
     end
@@ -36,7 +38,6 @@ class TeamsController < ApplicationController
   def destroy
     @team = Team.find(params[:id])
     @team.destroy
-    redirect_to team_url
+    redirect_to teams_url, :notice => "Successfully destroyed team."
   end
-
 end
