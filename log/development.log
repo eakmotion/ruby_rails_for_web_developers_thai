@@ -71041,3 +71041,1623 @@ Migrating to CreatePosts (20130124075022)
   [1m[35m (1.6ms)[0m  COMMIT
   [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
 Connecting to database specified by database.yml
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 15:53:35 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (13.3ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (30.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (22.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.5ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (14.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28 AND "posts"."parent_type" = 'comment'[0m
+PG::Error: ERROR:  column posts.parent_type does not exist
+LINE 1: ...* FROM "posts"  WHERE "posts"."match_id" = 28 AND "posts"."p...
+                                                             ^
+: SELECT "posts".* FROM "posts"  WHERE "posts"."match_id" = 28 AND "posts"."parent_type" = 'comment'
+  Rendered matches/show.html.erb within layouts/application (295.4ms)
+Completed 500 Internal Server Error in 455ms
+
+ActionView::Template::Error (PG::Error: ERROR:  column posts.parent_type does not exist
+LINE 1: ...* FROM "posts"  WHERE "posts"."match_id" = 28 AND "posts"."p...
+                                                             ^
+: SELECT "posts".* FROM "posts"  WHERE "posts"."match_id" = 28 AND "posts"."parent_type" = 'comment'):
+    54: </div>
+    55: 
+    56: <div id='statuses' %>
+    57:   <%= render @statuses %>
+    58: 
+    59: </div>
+  app/views/matches/show.html.erb:57:in `_app_views_matches_show_html_erb___2293263976837733593_70275406311360'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.5ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (80.0ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 243ms (Views: 151.8ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 15:54:10 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bg_noise.gif" for 127.0.0.1 at 2013-01-24 15:54:11 +0700
+Served asset /bg_noise.gif - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 15:54:17 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `user=' for #<Status:0x007fd48f46f6e8>):
+  app/controllers/statuses_controller.rb:4:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 15:54:19 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `user=' for #<Status:0x007fd48942a0a8>):
+  app/controllers/statuses_controller.rb:4:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:13:21 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 124ms
+
+NoMethodError (undefined method `user=' for #<Status:0x007fd49081e428>):
+  app/controllers/statuses_controller.rb:4:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:14:55 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "Testtt"], ["created_at", Thu, 24 Jan 2013 09:14:55 UTC +00:00], ["match_id", 28], ["postable_id", nil], ["postable_type", nil], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:14:55 UTC +00:00], ["user_id", nil]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (3.4ms)
+  Rendered statuses/create.js.erb (21.5ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (undefined method `user' for #<Status:0x007fd4893f8968>):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:8:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:17:50 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 108ms
+
+NoMethodError (undefined method `user=' for #<Status:0x007fd4894091c8>):
+  app/controllers/statuses_controller.rb:4:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:17:59 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `user=' for #<Status:0x007fd48a527478>):
+  app/controllers/statuses_controller.rb:4:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:19:35 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "Testtt"], ["created_at", Thu, 24 Jan 2013 09:19:35 UTC +00:00], ["match_id", 28], ["postable_id", nil], ["postable_type", nil], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:19:35 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (1.0ms)
+  Rendered statuses/create.js.erb (9.2ms)
+Completed 200 OK in 145ms (Views: 27.2ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:21:09 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Testtt2"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "Testtt2"], ["created_at", Thu, 24 Jan 2013 09:21:10 UTC +00:00], ["match_id", 28], ["postable_id", nil], ["postable_type", nil], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:21:10 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (1.0ms)
+  Rendered statuses/create.js.erb (9.3ms)
+Completed 200 OK in 145ms (Views: 25.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:21:32 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (1.6ms)
+  Rendered matches/show.html.erb within layouts/application (82.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 130ms (Views: 112.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:33 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:21:38 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"content"=>"test3"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "test3"], ["created_at", Thu, 24 Jan 2013 09:21:38 UTC +00:00], ["match_id", nil], ["postable_id", nil], ["postable_type", nil], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:21:38 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (0.3ms)
+  Rendered statuses/create.js.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:21:55 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.4ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (1.5ms)
+  Rendered matches/show.html.erb within layouts/application (125.0ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 397ms (Views: 392.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:21:56 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:21:56 +0700
+Served asset /base.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:56 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:56 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:21:57 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:22:03 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test4"}, "commit"=>"Post"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "test4"], ["created_at", Thu, 24 Jan 2013 09:22:03 UTC +00:00], ["match_id", 28], ["postable_id", nil], ["postable_type", nil], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:22:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (0.3ms)
+  Rendered statuses/create.js.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:25:56 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered statuses/_status.html.erb (3.0ms)
+  Rendered matches/show.html.erb within layouts/application (217.0ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 689ms (Views: 256.6ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /base.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:25:58 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:26:02 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test5"}, "commit"=>"Post"}
+  [1m[36mMatch Load (41.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", :match_id]]
+PG::Error: ERROR:  invalid input syntax for integer: "match_id"
+: SELECT  "matches".* FROM "matches"  WHERE "matches"."id" = $1 LIMIT 1
+Completed 500 Internal Server Error in 43ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  invalid input syntax for integer: "match_id"
+: SELECT  "matches".* FROM "matches"  WHERE "matches"."id" = $1 LIMIT 1):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:26:52 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test5"}, "commit"=>"Post"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", :match_id]]
+PG::Error: ERROR:  invalid input syntax for integer: "match_id"
+: SELECT  "matches".* FROM "matches"  WHERE "matches"."id" = $1 LIMIT 1
+Completed 500 Internal Server Error in 67ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  invalid input syntax for integer: "match_id"
+: SELECT  "matches".* FROM "matches"  WHERE "matches"."id" = $1 LIMIT 1):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.1ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:27:33 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test5"}, "commit"=>"Post"}
+Completed 404 Not Found in 28ms
+
+ActiveRecord::RecordNotFound (Couldn't find Match without an ID):
+  app/controllers/statuses_controller.rb:3:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:29:16 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test5"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "test5"], ["created_at", Thu, 24 Jan 2013 09:29:16 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:29:16 UTC +00:00], ["user_id", nil]]
+  [1m[35m (16.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (1.6ms)
+  Rendered statuses/create.js.erb (9.7ms)
+Completed 500 Internal Server Error in 136ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:10:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:29:51 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.5ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/_status.html.erb (3.7ms)
+  Rendered matches/show.html.erb within layouts/application (161.0ms)
+Completed 500 Internal Server Error in 258ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275423167360'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275423167360'
+  app/views/matches/show.html.erb:57:in `_app_views_matches_show_html_erb___2293263976837733593_70275406359020'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.7ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.2ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 86ms (Views: 82.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:30:48 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:30:53 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Test1"}, "commit"=>"Post"}
+  [1m[35mMatch Load (0.4ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["content", "Test1"], ["created_at", Thu, 24 Jan 2013 09:30:53 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:30:53 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE "posts" SET "user_id" = 1, "updated_at" = '2013-01-24 09:30:53.588195' WHERE "posts"."id" = 9
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered statuses/_status.html.erb (0.3ms)
+  Rendered statuses/create.js.erb (1.1ms)
+Completed 200 OK in 27ms (Views: 17.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1  [["id", "28"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.5ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered statuses/_status.html.erb (1.6ms)
+  Rendered matches/show.html.erb within layouts/application (188.9ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 296ms (Views: 253.1ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:52 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:33:53 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:33:58 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test2"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "test2"], ["created_at", Thu, 24 Jan 2013 09:33:58 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:33:58 UTC +00:00], ["user_id", nil]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (1.2ms)
+  Rendered statuses/create.js.erb (2.1ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:10:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:33:59 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test2"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "test2"], ["created_at", Thu, 24 Jan 2013 09:33:59 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:33:59 UTC +00:00], ["user_id", nil]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (0.9ms)
+  Rendered statuses/create.js.erb (1.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:10:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:34:20 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"test2"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "test2"], ["created_at", Thu, 24 Jan 2013 09:34:20 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:34:20 UTC +00:00], ["user_id", nil]]
+  [1m[35m (162.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (1.3ms)
+  Rendered statuses/create.js.erb (2.3ms)
+Completed 500 Internal Server Error in 175ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:10:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.7ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28[0m
+  [1m[35mTeamMember Load (0.3ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTeamMember Load (0.4ms)[0m  SELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (84.9ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 313ms (Views: 142.3ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:36:21 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:36:25 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"testt"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.5ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "testt"], ["created_at", Thu, 24 Jan 2013 09:36:25 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:36:25 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (0.9ms)
+  Rendered statuses/create.js.erb (1.5ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= div_for status, class: 'clearfix' do %>
+    2:   <blockquote><%= status.content %></blockquote>
+    3:   <span class='author'>
+    4:     <%= status.user.username %>
+    5:   </span>
+    6: <% end %>
+  app/views/statuses/_status.html.erb:4:in `block in _app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/_status.html.erb:1:in `_app_views_statuses__status_html_erb__2439199198294100839_70275458710300'
+  app/views/statuses/create.js.erb:1:in `_app_views_statuses_create_js_erb__4266759229421097231_70275456207080'
+  app/controllers/statuses_controller.rb:10:in `create'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:37:08 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 130ms
+
+NoMethodError (undefined method `to_i' for #<User:0x007fd491002f40>):
+  app/controllers/matches_controller.rb:8:in `new'
+  app/controllers/matches_controller.rb:8:in `show'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:37:10 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `to_i' for #<User:0x007fd48a0204e8>):
+  app/controllers/matches_controller.rb:8:in `new'
+  app/controllers/matches_controller.rb:8:in `show'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (49.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.8ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:37:11 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `to_i' for #<User:0x007fd48fbbe520>):
+  app/controllers/matches_controller.rb:8:in `new'
+  app/controllers/matches_controller.rb:8:in `show'
+
+
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/neung/.rbenv/versions/1.9.3-p362/lib/ruby/gems/1.9.1/gems/actionpack-3.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/matches/28" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "28"]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 28
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 7[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.6ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 8[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 28
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (121.7ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 284ms (Views: 239.2ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:37:20 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:37:40 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"28", "content"=>"Test1"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "Test1"], ["created_at", Thu, 24 Jan 2013 09:37:40 UTC +00:00], ["match_id", 28], ["postable_id", 28], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:37:40 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "user_id" = 1, "updated_at" = '2013-01-24 09:37:40.847488' WHERE "posts"."id" = 14[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (1.5ms)
+  Rendered statuses/create.js.erb (8.3ms)
+Completed 200 OK in 143ms (Views: 25.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Processing by MatchesController#index as HTML
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" [0m
+  Rendered matches/index.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:03 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/matches/31" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "31"]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 31
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 14[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 13[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 15[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 31
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (42.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 46.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:39:05 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:39:14 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"31", "content"=>"Test from 31"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "Test from 31"], ["created_at", Thu, 24 Jan 2013 09:39:14 UTC +00:00], ["match_id", 31], ["postable_id", 31], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:39:14 UTC +00:00], ["user_id", nil]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "user_id" = 1, "updated_at" = '2013-01-24 09:39:14.143535' WHERE "posts"."id" = 15[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (0.3ms)
+  Rendered statuses/create.js.erb (8.5ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 16:41:29 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"31", "content"=>"Test from 32"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "Test from 32"], ["created_at", Thu, 24 Jan 2013 09:41:29 UTC +00:00], ["match_id", 31], ["postable_id", 31], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 09:41:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "user_id" = 1, "updated_at" = '2013-01-24 09:41:29.559494' WHERE "posts"."id" = 16[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (0.2ms)
+  Rendered statuses/create.js.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/matches/31" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "31"]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 31
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 14[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.3ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 13[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 15[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 31
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered statuses/_status.html.erb (1.9ms)
+  Rendered matches/show.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
+Served asset /application.js - 304 Not Modified (0ms)
