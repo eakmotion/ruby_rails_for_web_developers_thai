@@ -1,0 +1,23 @@
+	<div class="profile">
+                <div class="thumbnail">
+                  <% if user_signed_in? %>
+                  <a><div><%= image_tag current_user.avatar_url(:thumb).to_s %></div></a>
+                  <div class="caption box-profile">
+                  	<ul>
+
+                  		<li><%= link_to current_user.username , edit_user_registration_path %></li>
+                  		<li><a href="#">25 Match from 5 Sports</a></li>
+                  		<li><a href="#">95 Win</a></li>
+                  		<li><a href="#">Rank 1 from friends</a></li>
+
+                  	</ul>
+
+                  </div>
+
+                  <% else %>
+                      <%= link_to 'Sign Up' , new_user_registration_path %>
+                  <% end %>
+
+                </div>
+
+	</div>

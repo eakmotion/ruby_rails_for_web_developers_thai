@@ -1,0 +1,11 @@
+<div class="fields">
+  <p>
+    <%= f.label :id, "Email" %>
+
+
+    <%= f.select :user_id , User.all.collect{|e| [e.email, e.id]} %>
+
+    <%= f.link_to_remove "remove" %>
+  </p>
+
+</div>

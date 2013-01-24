@@ -1,0 +1,59 @@
+<h3>Show Match</h3>
+
+<p>
+  <strong>Name:</strong>
+  <%= @match.name %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @match.time %>
+</p>
+
+
+<ol>
+<% for t in @match.teams %>
+  <li>
+    <%= t.name %>
+
+
+<%= form_for t do |f| %>
+<%= f.hidden_field :result, value: "win" %>
+<%= f.submit "WIN"  %>
+<% end %>
+
+    <ul>
+    <% for u in t.team_members %>
+      <li><%= u.user.email %></li>
+    <% end %>
+    </ul>
+  </li>
+<% end %>
+</ol>
+
+<%= form_for t do |f| %>
+<%= f.hidden_field :result, value: "tie" %>
+<%= f.submit "TIE"  %>
+<% end %>
+
+<p>
+  <%= link_to "Edit", edit_match_path(@match) %> |
+  <%= link_to "Destroy", @match, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", matches_path %>
+</p>
+
+<div class='tab-pane active clearfix'>
+    <%= form_for @new_status, remote: true do |f| %>
+    <%= f.hidden_field :match_id%>
+      <%= f.text_area :content,
+                      size: '3x3',
+                      class: 'input-block-level',
+                      placeholder: "Whats happening in this match?, #{current_user.username} " %>
+
+      <%= f.submit "Post", class: 'btn btn-small btn-primary pull-right' %>
+    <% end %>
+</div>
+
+<div id='statuses' %>
+  <%= render @statuses %>
+
+</div>

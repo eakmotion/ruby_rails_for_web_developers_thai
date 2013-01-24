@@ -1,0 +1,22 @@
+<%= nested_form_for @match do |f| %>
+  <p>
+    <%= f.label :name ,"Match name" %><br />
+    <%= f.text_field :name %>
+  </p>
+<p><%= f.select :sport_id , Sport.all.collect{|e| [e.name, e.id]} %></p>
+
+  <p>
+    <%= f.label :time %><br />
+    <%= f.date_select :time %>
+  </p>
+
+  <%= f.fields_for :teams do |build|  %>
+    <%= render 'team_fields', :f => build %>
+  <% end %>
+
+
+
+ <p><%= f.link_to_add 'Add Team', :teams %> </p>
+
+  <p><%= f.submit %></p>
+<% end %>

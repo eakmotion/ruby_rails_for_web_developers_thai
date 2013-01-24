@@ -1,0 +1,12 @@
+<%= form_for @team do |f| %>
+
+  <p>
+    <%= f.label :match_id %><br />
+    <%= f.number_field :match_id %>
+  </p>
+  <p>
+    <%= f.label :result %><br />
+    <%= f.text_field :result %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
