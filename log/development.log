@@ -72661,3 +72661,225 @@ Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 16:41:32 +0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2013-01-24 17:16:18 +0700
+Processing by MatchesController#index as HTML
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" [0m
+  Rendered matches/index.html.erb within layouts/application (39.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_navigation.html.erb (69.5ms)
+Completed 200 OK in 186ms (Views: 172.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:19 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/matches/27" for 127.0.0.1 at 2013-01-24 17:16:20 +0700
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mMatch Load (0.4ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", "27"]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."match_id" = 27
+  [1m[36mTeamMember Load (0.2ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 6[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTeamMember Load (0.4ms)[0m  [1mSELECT "team_members".* FROM "team_members" WHERE "team_members"."team_id" = 5[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."match_id" = 27
+  Rendered collection (0.0ms)
+  Rendered matches/show.html.erb within layouts/application (75.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 162ms (Views: 90.7ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/base.css?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /base.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-24 17:16:21 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2013-01-24 17:16:31 +0700
+Processing by StatusesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/o2cGUKZhp5XZ3qbOwnrf1BYARUh9rErJ6GlES88Wds=", "status"=>{"match_id"=>"27", "content"=>"Hello from 27"}, "commit"=>"Post"}
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "match_id", "postable_id", "postable_type", "rating", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["content", "Hello from 27"], ["created_at", Thu, 24 Jan 2013 10:16:31 UTC +00:00], ["match_id", 27], ["postable_id", 27], ["postable_type", "Match"], ["rating", nil], ["updated_at", Thu, 24 Jan 2013 10:16:31 UTC +00:00], ["user_id", nil]]
+  [1m[35m (17.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "posts" SET "user_id" = 1, "updated_at" = '2013-01-24 10:16:31.088536' WHERE "posts"."id" = 17[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered statuses/_status.html.erb (0.5ms)
+  Rendered statuses/create.js.erb (8.7ms)
+Completed 200 OK in 62ms (Views: 33.6ms | ActiveRecord: 20.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130115122151)
+Migrating to AddUsernameToUsers (20130115122258)
+Migrating to CreateMatches (20130115123838)
+Migrating to CreateSports (20130115123951)
+Migrating to CreateUserFriendships (20130115124045)
+Migrating to AddResultToCompetitors (20130116031828)
+Migrating to AddRatingToPosts (20130116040042)
+Migrating to AddStateToUserFriendships (20130122035112)
+Migrating to CreateTeams (20130122035748)
+Migrating to CreateTeamMembers (20130122035817)
+Migrating to AddAvatarToUsers (20130122043052)
+Migrating to DropCompetitors (20130123033455)
+Migrating to ChangeDefaultForTeamsResult (20130123052301)
+Migrating to DropPosts (20130124073838)
+Migrating to DropPosts2 (20130124074937)
+Migrating to CreatePosts (20130124075022)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

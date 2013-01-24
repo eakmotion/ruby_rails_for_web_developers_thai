@@ -14,11 +14,18 @@ class User < ActiveRecord::Base
  # has_many :posts
   has_many :friends, through: :user_friendships
   has_many :statuses
+  has_many :reviews
+
+  after_create :signup_confirmation
 
   mount_uploader :avatar , AvatarUploader
 
   def self.other_than(user)
     where("id != ?", user.id)
+  end
+
+  def signup_confirmation
+    UserMailer.signup_confirmation(@user).deliver
   end
 
 end

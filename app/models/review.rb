@@ -1,0 +1,3 @@
+class Review < Post
+
+end
