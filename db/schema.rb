@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130123052301) do
+ActiveRecord::Schema.define(:version => 20130124075022) do
 
   create_table "matches", :force => true do |t|
     t.string   "name"
@@ -22,15 +22,17 @@ ActiveRecord::Schema.define(:version => 20130123052301) do
   end
 
   create_table "posts", :force => true do |t|
-    t.integer  "parent_id"
-    t.string   "parent_type"
     t.text     "content"
+    t.integer  "rating"
     t.integer  "user_id"
     t.integer  "match_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "rating"
+    t.integer  "postable_id"
+    t.string   "postable_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
+
+  add_index "posts", ["postable_id", "postable_type"], :name => "index_posts_on_postable_id_and_postable_type"
 
   create_table "sports", :force => true do |t|
     t.string   "name"

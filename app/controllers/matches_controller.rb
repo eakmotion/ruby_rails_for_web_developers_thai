@@ -6,8 +6,7 @@ class MatchesController < ApplicationController
   def show
     @match = Match.find(params[:id])
     @new_status = Status.new(:match_id => @match.id) #@match.statuses.build
-    @statuses = Status.all      #Status.find_by_match(:params[:id])
-    #Status.all
+    @statuses = Status.where(:match_id => @match.id , :parent_type => 'comment')
   end
 
   def new

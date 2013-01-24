@@ -44,7 +44,6 @@
 <div class='tab-pane active clearfix'>
     <%= form_for @new_status, remote: true do |f| %>
     <%= f.hidden_field :match_id%>
-    <%= f.hidden_field :parent_type, value: "comment"  %>
       <%= f.text_area :content,
                       size: '3x3',
                       class: 'input-block-level',
