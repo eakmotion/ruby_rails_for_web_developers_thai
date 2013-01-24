@@ -5,33 +5,21 @@ class MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
-    @new_status = Status.new(:match_id => @match.id)#@match.statuses.build
-    @statuses = Status.all
+    @new_status = Status.new(:match_id => @match.id) #@match.statuses.build
+    @statuses = Status.all      #Status.find_by_match(:params[:id])
+    #Status.all
   end
 
   def new
-    #binding.pry
-    @match = Match.new  do |match|
-      match.teams.build do |team|
-        team.name = "A"
-        team.team_members.build
-       # team.users.build
-      end
-      match.teams.build do |team|
-        team.name = "B"
-        team.team_members.build
-       # team.users.build
-      end
+    @match = Match.new
+    2.times do |i|
+      team = @match.teams.build
+      team.generate_name(i)
     end
-
-    # 2.times do
-    #   team = @match.teams.build
-    #   1.times { team.users.build }
-    # end
-
   end
 
   def create
+    #binding.pry
     @match = Match.new(params[:match])
     if @match.save
       redirect_to @match, :notice => "Successfully created match."

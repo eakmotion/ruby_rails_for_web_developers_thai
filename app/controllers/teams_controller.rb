@@ -27,9 +27,8 @@ class TeamsController < ApplicationController
   def update
     #binding.pry
     @team = Team.find(params[:id])
-    #if @team.update_attributes(:result => params[:result])
     if @team.update_attributes(params[:team])
-      redirect_to @team, :notice  => "Successfully updated team."
+      redirect_to @team.match, :notice  => "Successfully updated team."
     else
       render :action => 'edit'
     end

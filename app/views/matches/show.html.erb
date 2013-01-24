@@ -16,10 +16,8 @@
     <%= t.name %>
 
 
-<!-- link_to "WIN", team_path( :result => "Win" , :id => t.id ), :method => :put  -->
-
-<%= nested_form_for t do |f| %>
-<%= f.hidden_field :result, value: "Win" %>
+<%= form_for t do |f| %>
+<%= f.hidden_field :result, value: "win" %>
 <%= f.submit "WIN"  %>
 <% end %>
 
@@ -31,6 +29,11 @@
   </li>
 <% end %>
 </ol>
+
+<%= form_for t do |f| %>
+<%= f.hidden_field :result, value: "tie" %>
+<%= f.submit "TIE"  %>
+<% end %>
 
 <p>
   <%= link_to "Edit", edit_match_path(@match) %> |
