@@ -28,4 +28,9 @@ class User < ActiveRecord::Base
     UserMailer.signup_confirmation(@user).deliver
   end
 
+  def user_ranking
+    self.teams.each do |t|
+    end
+  end
+
 end

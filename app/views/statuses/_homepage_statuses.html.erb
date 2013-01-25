@@ -1,0 +1,6 @@
+<%= div_for status, class: 'clearfix' do %>
+  <blockquote><%= status.content %></blockquote>
+  <span class='author'>
+    <%= status.user.username %>
+  </span>
+<% end %>

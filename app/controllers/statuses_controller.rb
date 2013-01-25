@@ -5,7 +5,6 @@ class StatusesController < ApplicationController
     @match.statuses.push(@status)
     @status.user = current_user
 
-    # @status = current_user.statuses.build(params[:status])
     if @status.save
       respond_to do |format|
         format.html { redirect_to '' }

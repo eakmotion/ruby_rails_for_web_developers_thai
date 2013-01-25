@@ -4,6 +4,7 @@ class Match < ActiveRecord::Base
   has_many :users, through: :teams
   accepts_nested_attributes_for :teams, :allow_destroy => true
   has_many :statuses, as: :postable
+  has_many :reviews, as: :postable
   belongs_to :sport
   #validate :check_player_uniqueness
   def check_player_uniqueness

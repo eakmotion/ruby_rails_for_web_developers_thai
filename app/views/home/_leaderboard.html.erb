@@ -1,6 +1,5 @@
 <div class="leaderboard">
 		<h3><i class="icon-trophy"></i> Leaderboard</h3>
-
 			<ul class="nav nav-tabs">
               <li class="active"><a href="#">Today</a></li>
               <li><a href="#">Week</a></li>
@@ -16,12 +15,8 @@
                   <li><a href="#">Something else here</a></li>
                 </ul>
       </div>
-
               </li>
       </ul>
-
-      
-
 			<table class="table table-bordered">
               <thead>
                 <tr>
@@ -31,32 +26,19 @@
                   <th>Win</th>
                 </tr>
               </thead>
+              <% for u in @users %>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Otto</td>
-                  <td>95</td>
-                </tr>
-                <tr>
-                	<td>2</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Otto</td>
-                  <td>93</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Thornton</td>
-                  <td>45</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><img src="http://placehold.it/50x50"></td>
-                  <td>Larry</td>
-                  <td>39</td>
+                  <td><%= image_tag u.avatar_url(:icon).to_s %></td>
+                  <td><%  for us in u.user_ranking %>
+                    <%= us.result %><br />
+                    <% end %>
+                  </td>
+                  <td><%= u.teams.where(:result => 'win').count %></td>
+
                 </tr>
               </tbody>
+              <% end %>
      		</table>
-
 	</div>
