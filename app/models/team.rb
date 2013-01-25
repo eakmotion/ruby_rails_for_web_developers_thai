@@ -29,4 +29,13 @@ class Team < ActiveRecord::Base
   def generate_name(index)
     self.name = DEFAULT_NAMES[index]
   end
+
+  def self.win_result
+    where(:result => 'win')
+  end
+
+  def self.lose_result
+    where(:result => 'lose')
+  end
+
 end

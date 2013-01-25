@@ -31,12 +31,9 @@
                 <tr>
                   <td>1</td>
                   <td><%= image_tag u.avatar_url(:icon).to_s %></td>
-                  <td><%  for us in u.user_ranking %>
-                    <%= us.result %><br />
-                    <% end %>
+                  <td><%= u.username %>
                   </td>
-                  <td><%= u.wins.length %></td>
-
+                  <td><%= u.teams.win_result.count %></td>
                 </tr>
               </tbody>
               <% end %>

@@ -7,7 +7,7 @@
 
                   		<li><%= link_to current_user.username , edit_user_registration_path %></li>
                   		<li><a href="#"><%= current_user.teams.count %> Match from 5 Sports</a></li>
-                  		<li><a href="#"><%= current_user.teams.where(:result => 'win').count %> Win</a></li>
+                  		<li><a href="#"><%= current_user.teams.win_result.count %> Win</a></li>
                   		<li><a href="#">Rank 1 from friends</a></li>
                   	</ul>
 

@@ -1,3 +1,0 @@
-class Review < Post
-
-end
