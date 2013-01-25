@@ -15,6 +15,23 @@ class User < ActiveRecord::Base
   has_many :friends, through: :user_friendships
   has_many :statuses
   has_many :reviews
+  has_many :wins, :class_name => Team , :finder_sql => proc {
+    %Q(
+      SELECT *
+      FROM teams t
+      INNER JOIN team_members tm ON t.id = tm.team_id
+      WHERE tm.user_id = #{id} and t.result = 'win'
+      )
+    }
+
+  has_many :loses, :class_name => Team , :finder_sql => proc {
+    %Q(
+      SELECT *
+      FROM teams t
+      INNER JOIN team_members tm ON t.id = tm.team_id
+      WHERE tm.user_id = #{id} and t.result = 'lose'
+      )
+    }
 
   after_create :signup_confirmation
 
