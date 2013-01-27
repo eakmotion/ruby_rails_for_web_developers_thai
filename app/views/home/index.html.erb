@@ -1,70 +1,28 @@
 <div class="span12 highlight-conter">
 <%= render @match %>
 </div>
-<ul class='nav nav-tabs'>
-  <li class='active'><a href='#activity' data-toggle='tab'>Activity</a></li>
-  <li><a href='#upcoming_match' data-toggle='tab'>Up coming Match</a></li>
-</ul>
 
-<div class='tab-content'>
-  <div id='activity' class='tab-pane active clearfix'>
-
-  <% for s in @statuses_homepage %>
-    <div class="status">
-      <div class="row">
-        <div class="span1">
-          <%= image_tag s.user.avatar_url(:thumb).to_s %>
-        </div>
-        <div class="span7">
-          <strong><%= link_to s.user.username , '#' %></strong>
-          <p><%= s.content %></p>
-          <div class="meta">
-            <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span></strong>
-            in <%= link_to s.match.name , '#' %> , <%= link_to time_ago_in_words(s.created_at) + " ago", '#' %>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-  </div>
-  <div id='upcoming_match' class='tab-pane clearfix'>
-
-    <% for m in @matches %>
-    <div class="status">
-      <div class="row">
-        <div class="span1">
-          <a class="thumbnail"><img src="http://placehold.it/100x100"></a>
-        </div>
-        <div class="span7">
-          <strong><%= m.name %></strong>
-          <p><%= m.time %></p>
-          <div class="meta">
-            <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span></strong>
-            in <%= link_to m.name , '#' %> , <%= link_to time_ago_in_words(m.created_at) + " ago", '#' %>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
+<% if user_signed_in? %>
+<%= render 'home/activity' %>
+<% end %>
 
 
-  </div>
+<div class="span3">
+
+  <%= render 'home/profile_box' %>
+
+  <%= render 'home/leaderboard' %>
+
 </div>
+
 
 <div class="span8"><h3>Activity</h3>
 	<ul class="nav nav-tabs">
               <li class="active"><a href="#">Statuses</a></li>
               <li><a href="#">Upcoming Match</a></li>
             </ul>
-	<%= render 'home/activity' %>
+	<%= render 'home/activity2' %>
 </div>
-<div class="span3">
 
-  <%= render 'home/profile_box' %>
-
-	<%= render 'home/leaderboard' %>
-
-</div>
 
 

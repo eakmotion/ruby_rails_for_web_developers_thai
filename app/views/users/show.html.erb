@@ -1,0 +1,20 @@
+<h3>Profile</h3>
+
+<div class="page-header">
+  <h1><%= @user.username %></h1>
+  <%= render 'follow_form' if signed_in? %>
+</div>
+
+<div class="thumbnail">
+                  <a><div><%= image_tag @user.avatar_url(:thumb).to_s %></div></a>
+                  <div class="caption box-profile">
+                    <ul>
+                      <li><%= link_to @user.username , edit_user_registration_path %></li>
+                      <li><a href="#"><%= @user.teams.count %> Match from 5 Sports</a></li>
+                      <li><a href="#"><%= @user.teams.win_result.count %> Win</a></li>
+                      <li><a href="#">Rank 1 from friends</a></li>
+                    </ul>
+                  </div>
+
+
+</div>

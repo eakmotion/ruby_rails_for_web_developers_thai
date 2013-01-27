@@ -1,11 +1,12 @@
 <div class="leaderboard">
 		<h3><i class="icon-trophy"></i> Leaderboard</h3>
-			<ul class="nav nav-tabs">
-              <li class="active"><a href="#">Today</a></li>
-              <li><a href="#">Week</a></li>
-              <li><a href="#">All</a></li>
-              <li>
-                <div class="btn-group">
+
+
+    <ul class='nav nav-tabs'>
+      <li class='active'><a href='#friends-leaderboard' data-toggle='tab'>Friends</a></li>
+      <li><a href='#everyone-leaderboard' data-toggle='tab'>Everyone</a></li>
+      <li>
+        <div class="btn-group">
                 <button data-toggle="dropdown" class="btn btn-info dropdown-toggle">Sports <span class="caret"></span></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Pool</a></li>
@@ -14,10 +15,15 @@
                   <li class="divider"></li>
                   <li><a href="#">Something else here</a></li>
                 </ul>
-      </div>
-              </li>
-      </ul>
-			<table class="table table-bordered">
+        </div>
+      </li>
+    </ul>
+
+
+    <div class='tab-content'>
+      <div id='friends-leaderboard' class='tab-pane active clearfix'>
+
+      <table class="table table-bordered">
               <thead>
                 <tr>
                   <th>#</th>
@@ -26,16 +32,21 @@
                   <th>Win</th>
                 </tr>
               </thead>
-              <% for u in @users %>
+              <% @users.to_enum.with_index(1) do |u, i| %>
               <tbody>
                 <tr>
-                  <td>1</td>
+                  <td><%= i %></td>
                   <td><%= image_tag u.avatar_url(:icon).to_s %></td>
                   <td><%= u.username %>
                   </td>
-                  <td><%= u.teams.win_result.count %></td>
+                  <td><%= u.win_counter_cache %></td>
                 </tr>
               </tbody>
               <% end %>
-     		</table>
+        </table>
+      </div>
+      <div id='everyone-leaderboard' class='tab-pane clearfix'>
+        EEEE
+      </div>
+    </div>
 	</div>

@@ -1,76 +1,51 @@
-<div class="status">
-  <div class="row">
-    <div class="span1">
-      <a><img src="http://placehold.it/100x100"></a>
-    </div>
-    <div class="span7">
-      <strong><span class="badge badge-success"><i class="icon-trophy"></i> WIN</span><a href="#">Eakkapan Zangkaew</a></strong> <a href="#">WIN Fifth in OOZOU Pool match 20</a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum atque sint natus hic ratione perferendis incidunt quo perspiciatis dolor at. Similique eaque odio excepturi eveniet hic non alias ratione dignissimos.</p>
-      <div class="meta">
-        <p>15 minutes ago</p>
-        <span class="admin">
-        </span>
+<div class="span8">
+  <ul class='nav nav-tabs'>
+    <li class='active'><a href='#activity' data-toggle='tab'>Activity</a></li>
+    <li><a href='#upcoming_match' data-toggle='tab'>Upcoming Match</a></li>
+  </ul>
+  <div class='tab-content'>
+    <div id='activity' class='tab-pane active clearfix'>
+
+    <% for s in @statuses_homepage %>
+      <div class="status">
+        <div class="row">
+          <div class="span1">
+            <%= link_to image_tag(s.user.avatar_url(:thumb).to_s) , s.user %>
+          </div>
+          <div class="span7">
+            <strong><%= link_to s.user.username , s.user %></strong>
+            <p><%= s.content %></p>
+            <div class="meta">
+              <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span></strong>
+              in <%= link_to s.match.name , '#' %> , <%= link_to time_ago_in_words(s.created_at) + " ago", '#' %>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    <% end %>
 
-<div class="status">
-  <div class="row">
-    <div class="span1">
-      <a><img src="http://placehold.it/100x100"></a>
     </div>
-    <div class="span7">
-      <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span><a href="#">Eakkapan Zangkaew</a></strong> Talk about <a href="#">OOZOU Pool match 20</a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum atque sint natus hic ratione perferendis incidunt quo perspiciatis dolor at. Similique eaque odio excepturi eveniet hic non alias ratione dignissimos.</p>
-      <div class="meta">
-        <p>17 minutes ago</p>
-        <span class="admin">
-        </span>
+    <div id='upcoming_match' class='tab-pane clearfix'>
+
+      <% for m in @matches %>
+      <div class="status">
+        <div class="row">
+          <div class="span1">
+            <a class="thumbnail"><img src="http://placehold.it/100x100"></a>
+          </div>
+          <div class="span7">
+            <strong><%= m.name %></strong>
+            <p><%= m.time %></p>
+            <div class="meta">
+              <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span></strong>
+              in <%= link_to m.name , '#' %> , <%= link_to time_ago_in_words(m.created_at) + " ago", '#' %>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="status">
-  <div class="row">
-    <div class="span1">
-      <a><img src="http://placehold.it/100x100"></a>
-    </div>
-    <div class="span7">
-      <strong><span class="badge badge-info"><i class="icon-comments"></i> Talk</span><a href="#">Fifth</a></strong> Talk about <a href="#">OOZOU Pool match 20</a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum atque sint natus hic ratione perferendis incidunt quo perspiciatis dolor at. Similique eaque odio excepturi eveniet hic non alias ratione dignissimos.</p>
-      <div class="meta">
-        <p>18 minutes ago</p>
-        <span class="admin">
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="status">
-  <div class="row">
-    <div class="span1">
-      <a><img src="http://placehold.it/100x100"></a>
-    </div>
-    <div class="span7">
-      <strong><span class="badge badge-important"><i class="icon-thumbs-up"></i> Review</span><a href="#">Eakkapan Zangkaew</a></strong> Give 
+    <% end %>
 
 
-        <span class="rating">
-          <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-        </span>
-
-
-
-      <a href="#">OOZOU Pingpong match 12</a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum atque sint natus hic ratione perferendis incidunt quo perspiciatis dolor at. Similique eaque odio excepturi eveniet hic non alias ratione dignissimos.</p>
-      <div class="meta">
-        <p>40 minutes ago</p>
-        <span class="admin">
-        </span>
-      </div>
     </div>
   </div>
 </div>

@@ -13,9 +13,20 @@ class Match < ActiveRecord::Base
 
   def mark_losers
     teams.where("result != ?", 'win').update_all(result: 'lose')
+    winner_team = self.teams.where(result: "win").first
+    winner_team.users.each do |u|
+      u.update_attribute(:win_counter_cache, u.win_counter_cache + 1)
+    end
   end
 
   def mark_tied
     teams.update_all(result: 'tie')
+  end
+
+  def self.from_users_followed_by(user)
+    followed_user_ids = "SELECT followed_id FROM relationships
+                         WHERE follower_id = :user_id"
+    where("user_id IN (#{followed_user_ids}) OR user_id = :user_id",
+          user_id: user.id)
   end
 end

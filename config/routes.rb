@@ -1,6 +1,12 @@
 Gamesss::Application.routes.draw do
   devise_for :users
-
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :profiles
+  resources :relationships, only: [:create, :destroy]
   resources :teams
   resources :matches
   resources :sports
