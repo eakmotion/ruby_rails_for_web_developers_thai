@@ -15,3 +15,22 @@
 //= require bootstrap
 //= require jquery_nested_form
 //= require_tree .
+
+$(function() {
+        $( '#ri-grid' ).gridrotator( {
+          rows    : 1,
+          columns   : 7,
+          animType  : 'fadeInOut',
+          animSpeed : 1000,
+          interval  : 600,
+          step    : 1,
+          w320    : {
+            rows  : 3,
+            columns : 4
+          },
+          w240    : {
+            rows  : 3,
+            columns : 4
+          }
+        } );
+});

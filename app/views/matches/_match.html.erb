@@ -1,10 +1,12 @@
-<h3><i class="icon-check"></i> Upcoming Match : <a href="#"><%= match.name %></a> @Today at  5:15 PM</h3>
+<h3><i class="icon-check"></i> Upcoming Match : <%= link_to match.name , match %> @ <%= match.time %></h3>
 <div>
   <ul class="thumbnails">
     <% for u in @match.users %>
+    <div class="span2">
       <li><a class="thumbnail"><%= link_to image_tag(u.avatar_url(:highlight).to_s) , u %></a>
-      <strong><%= link_to u.username , u %><span class="label label-info profile-rank">Rank 1</span></strong>
+      <strong><%= link_to u.username , u %><span class="label label-info profile-rank">Rank 1</span><a href"" class="btn"><i class="icon-thumbs-up"></i>Cheer Up</a></strong>
     </li>
+    </div>
     <li><span class="badge badge-important text-vs">VS</span></li>
     <% end %>
   </ul>

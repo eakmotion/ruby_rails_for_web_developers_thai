@@ -1,28 +1,23 @@
-<div class="span12 highlight-conter">
+<% if user_signed_in? %>
+<div class="span8 highlight-conter">
 <%= render @match %>
 </div>
-
-<% if user_signed_in? %>
-<%= render 'home/activity' %>
-<% end %>
-
-
 <div class="span3">
-
   <%= render 'home/profile_box' %>
+</div>
+<%= render 'home/test2' %>
+<%= render 'home/activity' %>
+<% else %>
 
+<%= render 'home/test3' %>
+<%= render 'home/people' %>
+<%= render 'home/test' %>
+
+<% end %>
+<div class="span3">
   <%= render 'home/leaderboard' %>
-
 </div>
 
-
-<div class="span8"><h3>Activity</h3>
-	<ul class="nav nav-tabs">
-              <li class="active"><a href="#">Statuses</a></li>
-              <li><a href="#">Upcoming Match</a></li>
-            </ul>
-	<%= render 'home/activity2' %>
-</div>
 
 
 

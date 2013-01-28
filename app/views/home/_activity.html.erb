@@ -17,7 +17,7 @@
             <p><%= s.content %></p>
             <div class="meta">
               <strong> <span class="badge badge-info"><i class="icon-comments"></i> Talk</span></strong>
-              in <%= link_to s.match.name , '#' %> , <%= link_to time_ago_in_words(s.created_at) + " ago", '#' %>
+              in <%= link_to s.match.name , s.match %> , <%= link_to time_ago_in_words(s.created_at) + " ago", '#' %>
             </div>
           </div>
         </div>

@@ -1,0 +1,38 @@
+	<% if user_signed_in? %>
+  <div class="profile">
+                <div class="thumbnail">
+
+                  <a><div><%= image_tag current_user.avatar_url(:thumb).to_s %></div></a>
+                  <div class="caption box-profile">
+                  	<ul>
+
+                  		<li><%= link_to current_user.username , edit_user_registration_path %></li>
+                  		<li><a href="#"><%= current_user.teams.count %> Match from x Sports</a></li>
+                  		<li><a href="#"><%= current_user.teams.win_result.count %> Win</a></li>
+                  		<li><a href="#">Rank x from friends</a></li>
+                  	</ul>
+
+                  </div>
+
+                  <div class="stats">
+                <a href="#">
+                  <strong id="following" class="stat">
+                    <%= current_user.followed_users.count %>
+                  </strong>
+                  following
+                </a>
+                <a href="#">
+                  <strong id="followers" class="stat">
+                    <%= current_user.followers.count %>
+                  </strong>
+                  followers
+                </a>
+              </div>
+
+
+                </div>
+
+
+
+	</div>
+  <% end %>

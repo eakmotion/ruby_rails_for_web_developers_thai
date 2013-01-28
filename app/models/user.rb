@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   #     )
   #   }
 
-  after_create :signup_confirmation
+  #after_create :signup_confirmation
 
   mount_uploader :avatar , AvatarUploader
 
